@@ -24,3 +24,225 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+button{
+    cursor: pointer;
+}
+/* --- Global Reset --- */
+* {
+    box-sizing: border-box;
+}
+
+/* --- Footer Main Container --- */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 60px 5%; /* Use percentage for responsive padding */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* --- Top Section: Links + Social --- */
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    padding-bottom: 40px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap */
+}
+
+.footer-column {
+    min-width: 180px; /* Ensures columns have some space */
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.footer-column h4 {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #7e7e7e; /* Lighter grey for sub-links */
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+/* Special styling for the first column (main links) */
+.footer-column-main-links ul li a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-column-main-links ul li a:hover {
+    color: #b0b0b0;
+}
+
+/* --- Social Media Column --- */
+.footer-social ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social ul li {
+    margin-left: 10px;
+}
+
+.footer-social ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: #7e7e7e;
+    color: #111;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.footer-social ul li a:hover {
+    background-color: #fff;
+}
+
+/* --- Bottom Bar: Copyright + Legal --- */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 12px;
+    color: #7e7e7e;
+}
+
+.footer-bottom-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px; /* For mobile */
+}
+
+.footer-bottom-left .location {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer-bottom-left .location span {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.footer-bottom-left .copyright {
+    margin: 0;
+}
+
+.footer-bottom-right ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-bottom-right ul li {
+    margin-left: 20px;
+    margin-bottom: 5px; /* For mobile wrapping */
+}
+
+.footer-bottom-right ul li a {
+    text-decoration: none;
+    color: #7e7e7e;
+    transition: color 0.2s;
+}
+
+.footer-bottom-right ul li a:hover {
+    color: #fff;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 960px) {
+    .footer-main {
+        /* Stack link-block and social-block */
+        flex-direction: column;
+    }
+
+    .footer-links {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .footer-column {
+        margin-right: 20px; /* Reduce margin */
+    }
+
+    .footer-social {
+        margin-top: 30px; /* Add space when stacked */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        /* Stack left and right sections */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom-right {
+        margin-top: 15px;
+    }
+
+    .footer-bottom-right ul {
+        padding-left: 0;
+    }
+
+    .footer-bottom-right ul li {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        /* Stack all columns */
+        flex-direction: column;
+    }
+    .footer-column {
+        margin-right: 0;
+    }
+}
