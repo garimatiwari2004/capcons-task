@@ -5,11 +5,12 @@ import Image from "next/image";
 import nikelogo from "@/public/assets/landingPage/nikelogo.png";
 import minilogo from "@/public/assets/landingPage/minilogo.png";
 import { Profiler, useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="bg-[#F5F5F5] text-black shadow-md">
+    <header className="bg-[#F5F5F5] text-black shadow-md fixed top-0 left-0 w-full z-50">
       <nav className="hidden md:flex flex-col">
         <div className="flex justify-between w-full py-1">
           <div className="ml-3 md:ml-8">
@@ -17,25 +18,27 @@ export default function Navbar() {
           </div>
           {/* <div className="text-sm">Skip to main content</div> */}
           <div className="flex gap-2 pr-4 text-sm items-center">
-            <div className=" border-r-2 border-r-black px-2">Find a Store</div>
-            <div className="border-r-2 border-r-black px-2">Help</div>
-            <div className=" border-r-2 border-r-black px-2">Join us</div>
-            <div className=" ">Sign in</div>
+            <div className="cursor-pointer border-r-2 border-r-black px-2  hover:text-blue-950">Find a Store</div>
+            <div className="cursor-pointer border-r-2 border-r-black px-2  hover:text-blue-950">Help</div>
+            <div className="cursor-pointer border-r-2 border-r-black px-2  hover:text-blue-950">Join us</div>
+            <div className="cursor-pointer hover:text-blue-950 ">Sign in</div>
           </div>
         </div>
-        <div className="flex justify-between bg-white p-3 items-center">
+        <div className="grid grid-cols-3 justify-between bg-white p-3 items-center">
           <div className="ml-3 md:ml-8 ">
+            <Link href={"/"}>
             <Image src={nikelogo} alt="nike" />
+            </Link>
           </div>
-          <div className="flex items-center gap-6 text-sm ">
-            <div>New and Featured</div>
-            <div>Men</div>
-            <div>Women</div>
-            <div>Kids</div>
-            <div>Sale</div>
-            <div>SNKRS</div>
+          <div className="flex w-full justify-center  items-center gap-6 text-sm ">
+            <a className="hover:underline cursor-pointer">New and Featured</a>
+            <a className="hover:underline cursor-pointer">Men</a>
+            <a className="hover:underline cursor-pointer">Women</a>
+            <a className="hover:underline cursor-pointer">Kids</a>
+            <a className="hover:underline cursor-pointer">Sale</a>
+            <a className="hover:underline cursor-pointer">SNKRS</a>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 justify-end items-center">
             <div className="rounded-2xl p-1 bg-[#F5F5F5] flex items-center gap-2">
               <Search></Search>
               <input type="text" placeholder="Search" className="border-none" />
@@ -90,10 +93,10 @@ export default function Navbar() {
         )}
         
       </nav>
-      <div className="hidden md:flex flex-col w-full text-center space-y-2 py-1 bg-[#f5f5f5]">
+      {/* <div className="hidden md:flex flex-col w-full text-center space-y-2 py-1 bg-[#f5f5f5]">
           <h3 className="text-md">Hello Nike App</h3>
-          <p className="text-xs ">Download the app to access everything Nike  <a href="" className="">Get your great</a></p>
-        </div>
+          <p className="text-xs ">Download the app to access everything Nike  <a href="" className=" cursor-pointer underline text-blue-600">Get your great</a></p>
+      </div> */}
     </header>
   );
 }

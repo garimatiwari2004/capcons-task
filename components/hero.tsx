@@ -9,9 +9,14 @@ import abother from "@/public/assets/landingPage/abother.png";
 import essential1 from "@/public/assets/landingPage/essential1.png";
 import essential2 from "@/public/assets/landingPage/essential2.png";
 import essential3 from "@/public/assets/landingPage/essential3.png";
+import Link from "next/link";
 export default function Hero() {
   return (
     <div className="container flex flex-col mx-auto">
+      <div className="hidden md:flex flex-col w-full text-center space-y-2 py-1 bg-[#f5f5f5]">
+          <h3 className="text-md">Hello Nike App</h3>
+          <p className="text-xs ">Download the app to access everything Nike  <a href="" className=" cursor-pointer underline text-blue-600">Get your great</a></p>
+      </div>
       <div className="px-0 md:px-10 ">
         <Image src={hero} alt="hero image" className="w-full" />
       </div>
@@ -27,9 +32,11 @@ export default function Hero() {
           <button className="bg-black rounded-2xl text-white font-semibold px-5 py-2">
             Notify me
           </button>
+          <Link href={"/products"}>
           <button className="bg-black rounded-2xl text-white font-semibold px-5 py-2">
             Shop Air Max
           </button>
+          </Link>
         </div>
       </div>
       <div className=" bg-white px-2 md:px-10 ">
