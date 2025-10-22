@@ -12,7 +12,7 @@ import essential3 from "@/public/assets/landingPage/essential3.png";
 import Link from "next/link";
 export default function Hero() {
   return (
-    <div className="container flex flex-col mx-auto">
+    <div className="container flex flex-col mx-auto pt-24">
       <div className="hidden md:flex flex-col w-full text-center space-y-2 py-1 bg-[#f5f5f5]">
           <h3 className="text-md">Hello Nike App</h3>
           <p className="text-xs ">Download the app to access everything Nike  <a href="" className=" cursor-pointer underline text-blue-600">Get your great</a></p>

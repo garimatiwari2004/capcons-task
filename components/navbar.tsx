@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="bg-[#F5F5F5] text-black shadow-md fixed top-0 left-0 w-full z-50">
+    <header className="bg-[#F5F5F5] text-black shadow-md h-16 fixed top-0 left-0 w-full z-50">
       <nav className="hidden md:flex flex-col">
         <div className="flex justify-between w-full py-1">
           <div className="ml-3 md:ml-8">
