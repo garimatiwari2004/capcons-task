@@ -31,12 +31,12 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="flex w-full justify-center  items-center gap-6 text-sm ">
-            <a className="hover:underline cursor-pointer">New and Featured</a>
-            <a className="hover:underline cursor-pointer">Men</a>
-            <a className="hover:underline cursor-pointer">Women</a>
-            <a className="hover:underline cursor-pointer">Kids</a>
-            <a className="hover:underline cursor-pointer">Sale</a>
-            <a className="hover:underline cursor-pointer">SNKRS</a>
+            <a className="hover:underline cursor-pointer" href="/products">New and Featured</a>
+            <a className="hover:underline cursor-pointer" href="/products">Men</a>
+            <a className="hover:underline cursor-pointer" href="/products">Women</a>
+            <a className="hover:underline cursor-pointer" href="/products">Kids</a>
+            <a className="hover:underline cursor-pointer" href="/products">Sale</a>
+            <a className="hover:underline cursor-pointer" href="/products">SNKRS</a>
           </div>
           <div className="flex gap-2 justify-end items-center">
             <div className="rounded-2xl p-1 bg-[#F5F5F5] flex items-center gap-2">

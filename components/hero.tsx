@@ -21,7 +21,7 @@ export default function Hero() {
         <Image src={hero} alt="hero image" className="w-full" />
       </div>
       <div className="text-center text-[#111111] space-y-4 my-8 px-8">
-        <h3 className="font-bold">First look</h3>
+        <h3 className="font-bold" >First look</h3>
         <h1 className="text-5xl font-semibold">NIKE AIR MAX PULSE</h1>
         <p className="text-[#111111] text-sm">
           Extreme comfort. Hyper durable. Max volume. Introducing the Air Max
@@ -75,11 +75,15 @@ export default function Hero() {
         <div className="px-10">Gear up</div>
         <div className="grid grid-cols-1 gap-2 md:grid-cols-2 p-4 auto-rows-fr">
           <div className="pl-0 md:pl-10">
+            <Link href={"/products"}>
             <h1 className="text-center  w-full">Shop Men's</h1>
+            </Link>
             <FeaturedCarousel />
           </div>
           <div className="pr-0 md:pr-10">
-            <h1 className="text-center w-full">Shop Women's</h1>
+            <Link href={"/products"}>
+            <div className="text-center w-full">Shop Women's</div>
+            </Link>
             <CarouselWomen />
           </div>
         </div>
